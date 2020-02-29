@@ -1,0 +1,2 @@
+1.  The Real-Time Publisher/Subscriber Communication Model for Distributed Substation Systems
+----https://ieeexplore.ieee.org/document/4265711
