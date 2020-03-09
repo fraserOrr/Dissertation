@@ -2,6 +2,7 @@ import java.math.BigInteger;
 public class Sender{
 
 	private BigInteger Modulus;
+	
 
 	public void requestPuKey(BigInteger PublicKey){
 		Modulus = PublicKey;

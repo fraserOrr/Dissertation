@@ -3,12 +3,22 @@ public class Network{
 
 	public static void main(String[] args) {
 		String Message = "Test1 and test2";
-		byte[] bytes = Message.getBytes();
+
+		RSAexample(Message);
 		//System.out.println(bytes.length);
 
+	}	
 		
+	public static void StreamCipher(){
+		
+	}
+		
+
+	
+	public static void RSAexample(String Message){
+		byte[] bytes = Message.getBytes();
 		float totaltime2 = 0;
-		for(int i =1;i<1000;i++){
+		///for(int i =1;i<1000;i++){
 
 			long startTime = System.nanoTime();
 			Sender IoTSender = new Sender();
@@ -27,10 +37,7 @@ public class Network{
 			long endTime   = System.nanoTime();
 			long totalTime = (endTime - startTime);
 			totaltime2 = totaltime2 + (float)totalTime/1000000;
-			System.out.println(totaltime2/i);
-		}
-		
-		
-
+			System.out.println(totaltime2);
+		//}
 	}
 }
