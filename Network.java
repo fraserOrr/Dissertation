@@ -9,7 +9,8 @@ public class Network{
 
 	}	
 		
-	public static void StreamCipher(){
+	public static void StreamCipher(String Message){
+
 		
 	}
 		
