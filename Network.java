@@ -4,12 +4,12 @@ public class Network{
 	public static void main(String[] args) {
 		String Message = "Test1 and test2";
 
-		RSAexample(Message);
+		//RSAexample(Message);
 		//System.out.println(bytes.length);
 
 	}	
 		
-	public static void StreamCipher(String Message){
+	public static void AES(String Message){
 
 		
 	}
