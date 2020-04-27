@@ -1,3 +1,4 @@
 # Dissertation
 
-Compile all the run java SpeedTester to open up the gui 
+Compile all.
+Then run "java SpeedTester" to open up the gui 
