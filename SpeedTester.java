@@ -10,7 +10,7 @@ public class SpeedTester extends Frame implements  ActionListener{
 	JPanel panel1,panel2,panel3;
 	JLabel label1,label2,label3;
 	JButton bttn1,bttn2,bttn3;
-	JComboBox comboBox, msgComboBox,topologyComboBox,msgSizeBox;
+	JComboBox comboBox,/* msgComboBox,*/topologyComboBox,msgSizeBox;
 	JTextArea outputText;
 	public SpeedTester(){
 		setUpGui();
@@ -20,29 +20,31 @@ public class SpeedTester extends Frame implements  ActionListener{
 	public void setUpGui(){
 		frame = new JFrame("SpeedTester");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-     frame.setSize(400, 400);
+     frame.setSize(250, 300);
 
       		  // AES Panel
 				panel1 = new JPanel();
-				//label1 = new JLabel("AES Alogorithm");
+				label1 = new JLabel("Encryption ALgorithm: ");
 				comboBox = new JComboBox();
 				comboBox.addItem("AES");
 				comboBox.addItem("RSA");
 				comboBox.addItem("ChaCha20");
 
-				msgComboBox = new JComboBox();
+				/*msgComboBox = new JComboBox();
 				
 				msgComboBox.addItem("GOOSE");
 				msgComboBox.addItem("SMV");
-				msgComboBox.addItem("MMS");
-
+				msgComboBox.addItem("MMS");*/
+//"Input Size (bytes): "
 				msgSizeBox = new JComboBox();
+				label2 = new JLabel("Input Size (bytes): ");
 				msgSizeBox.addItem("100");
 				msgSizeBox.addItem("200");
-				msgSizeBox.addItem("300");
 				msgSizeBox.addItem("500");
-
+				msgSizeBox.addItem("1000");
+//"Netowrk Topology: "
 				topologyComboBox = new JComboBox();
+				label3 = new JLabel("Network Topology: ");
 				topologyComboBox.addItem("Neglible");
 				topologyComboBox.addItem("WLAN");
 				topologyComboBox.addItem("4G");
@@ -51,9 +53,12 @@ public class SpeedTester extends Frame implements  ActionListener{
 
 				bttn1 = new JButton("Start");
 				bttn1.addActionListener(this);
+				panel1.add(label1);
 				panel1.add(comboBox);
-				panel1.add(msgComboBox);
+				panel1.add(label2);
+				//panel1.add(msgComboBox);
 				panel1.add(msgSizeBox);
+				panel1.add(label3);
 				panel1.add(topologyComboBox);
 				panel1.add(bttn1);
 
@@ -82,15 +87,15 @@ public class SpeedTester extends Frame implements  ActionListener{
 		
 		if(e.getSource() == bttn1){
 			String input1 = (String)comboBox.getSelectedItem();
-			String input2 = (String)msgComboBox.getSelectedItem();
+			//String input2 = (String)msgComboBox.getSelectedItem();
 			String input3 = (String)topologyComboBox.getSelectedItem();
 			String input4 = (String)msgSizeBox.getSelectedItem();
 
-			System.out.println(input1 + ", " + input2 + ", " + input3 + ".");
-			NetworkSetup(input1, input2, input3, input4);
+			System.out.println(input1 + ", " /*+ input2 + ", "*/ + input3 + ", " + input4 + ".");
+			NetworkSetup(input1,/* input2,*/ input3, input4);
 		}
 	}
-	public void NetworkSetup(String input1 ,String input2,String input3,String input4){
+	public void NetworkSetup(String input1 ,/*String input2,*/String input3,String input4){
 		Network netTest = new Network();
 		int latency = 0;
 		String msgType = "";
@@ -100,19 +105,19 @@ public class SpeedTester extends Frame implements  ActionListener{
 		}else if(input3 == "WLAN"){
 			latency= 2;
 		}
-		if(input2 == "MMS"){
+		/*if(input2 == "MMS"){
 			msgType = "MMS";
 		}else if(input2 == "SMV"){
 			msgType = "SMV";
 		}else if(input2 == "GOOSE"){
 			msgType ="GOOSE";
-		}
+		}*/
 		if(input4 == "100"){
 			msgSize = 100;
 		}else if(input4 == "200"){
 			msgSize = 200;
-		}else if(input4 == "300"){msgSize = 300;}
-		else if (input4 == "500"){msgSize = 500;}
+		}else if(input4 == "500"){msgSize = 500;}
+		else if (input4 == "1000"){msgSize = 1000;}
 
 		Random randomno = new Random();
 		byte[] nbyte = new byte[msgSize];

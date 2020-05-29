@@ -1,0 +1,18 @@
+chp2
+1.  The Real-Time Publisher/Subscriber Communication Model for Distributed Substation Systems
+----https://ieeexplore.ieee.org/document/4265711
+
+2. Summary of GOOSE Substation Communication
+	--- https://www.researchgate.net/publication/282771945_Summary_of_GOOSE_Substation_Communication
+3. Securing restricted publisher-subscriber communications in smart grid substations
+ --- https://ieeexplore.ieee.org/document/8328220
+4. A study on GOOSE communication based on IEC 61850 using MMS ease lite
+--https://ieeexplore.ieee.org/document/4406651
+
+chp 4
+5. https://globaljournals.org/GJCST_Volume15/3-Implementation-of-AES.pdf   ---- AES
+6. https://cr.yp.to/chacha/chacha-20080128.pdf -- chacha orignal paper
+7.https://cr.yp.to/snuffle/salsafamily-20071225.pdf -- salsa family paper   <-- both by Daniel J. Bernstein 
+8. https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html -- java documentation 
+9. SCD based IEC 61850 traffic estimation for substation automation networks
+A. Ingalalli, K. S. Silpa and R. Gore, "SCD based IEC 61850 traffic estimation for substation automation networks," 2017 22nd IEEE International Conference on Emerging Technologies and Factory Automation (ETFA), Limassol, 2017, pp. 1-8

@@ -32,44 +32,7 @@ public class ChaCha20
 
 	public static void main(String[] args) throws Exception
 	{
-		/*long avgTime = 0;
-		byte[] bytePlainText = plainText.getBytes();
-		for(int i =1;i<1000;i++){
-		keygen = KeyGenerator.getInstance("ChaCha20");
-		keygen.init(256);
-
-		// Generate Key
-		key = keygen.generateKey();
-
-		System.out.println("Original Text  : " + plainText);
-
-		long startTime = System.nanoTime();
-
-		byte[] cipherText = encrypt(bytePlainText, key);
-		//System.out.println("Encrypted Text : " + Base64.getEncoder().encodeToString(cipherText));
-		long endTime   = System.nanoTime();
-		String decryptedText = decrypt(cipherText, key);
-		long endTime2   = System.nanoTime();
 		
-		
-
-
-		System.out.println("DeCrypted Text : " + decryptedText);
-
-
-
-
-		long totalTime = (endTime - startTime); 
-		long totalTime2 = (endTime2 - endTime); 
-		System.out.println("Encryption takes: " + (float)totalTime/1000000);
-		System.out.println("Decryption takes: " + (float)totalTime2/1000000);
-		System.out.println("Total time takess " + (float)(totalTime2+totalTime)/1000000);
-		avgTime = avgTime +totalTime2+totalTime2;
-		}
-
-		System.out.println("");
-		System.out.println("Avg Total Time " + (float)avgTime/1000/1000000);
-		*/
 	}
 
 	public static byte[] encrypt(byte[] plaintext, SecretKey key) throws Exception
